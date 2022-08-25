@@ -1,0 +1,57 @@
+#app {
+    width: 100%;
+}
+
+.bg-primary {
+    background-color:#d1b38e;
+}
+.bg-secondary {
+    background-color: #e2d1b2;
+}
+.bg {
+    background-color: #e2d1b2;
+}
+
+.bg-light {
+    background-color: #f5f5dd;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-primary {
+    color: #774a45;
+}
+
+.text-selected {
+    color: #c6ac90;
+}
+
+
+#app header {
+    display: flex;
+    justify-content: center;
+}
+
+.f-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.f-v {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-h {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    width: 20%;
+    min-width: 150px;
+}
