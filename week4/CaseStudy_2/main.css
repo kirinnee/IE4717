@@ -20,9 +20,18 @@ body {
     list-style-image: url("images/bullet.gif")
 }
 
+.max-width{
+    width: 100%;
+}
+
+.max-height {
+    height: 100%;
+}
+
 .nav {
-    width: 20%;
-    min-width: 250px;
+    padding: 40px 0;
+    width: 10%;
+    min-width: 180px;
     font-size: 24px;
     display: flex;
     flex-direction: column;
@@ -54,6 +63,10 @@ body {
     padding: 24px;
 }
 
+
+.m-none {
+    margin: 0;
+}
 .m-s {
     margin: 4px;
 }
@@ -107,6 +120,23 @@ body {
 
 }
 
+.f-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.f-space-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
 .f-v {
     display: flex;
     flex-direction: column;
@@ -118,7 +148,7 @@ body {
 }
 
 .page-content {
-    width: 80%;
+    width: 90%;
 }
 
 
@@ -142,9 +172,17 @@ body {
     text-align: center;
 }
 
-.f-wrap {
-    flex-wrap: wrap;
+.avatar {
+    padding: 10px 15px;
+    width: 64px;
 }
+
+.music-holder {
+    margin: auto;
+    max-width: 500px;
+    width: 90%;
+}
+
 
 @media only screen and (max-width: 720px) {
     body {
