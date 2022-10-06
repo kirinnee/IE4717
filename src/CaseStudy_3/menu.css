@@ -1,0 +1,26 @@
+.p-int {
+    font-size: 20px;
+    text-align: center;
+    width: 28px;
+    padding: 8px;
+    height: 20px;
+}
+
+.minus, .plus {
+    text-align: center;
+    border: 1px solid #00000033;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #00000033;
+    transition: all 0.4s;
+    user-select: none;
+}
+
+.minus:hover, .plus:hover {
+    color:white;
+    background-color: #000000;
+}

@@ -1,0 +1,30 @@
+.job-application label {
+    display: block; 
+    width: 150px; 
+    text-align: right; 
+    margin: 10px 15px;
+    color: #2E0000;
+}
+
+.job-application .button {
+    width: 100px;
+    text-align: center;
+    border: #2E0000 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+
+.job-application input, .job-application textarea {
+    display: block; 
+    width: 200px; 
+    text-align: left; 
+    margin: 10px 15px;
+}
+
+.job-application div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JavaJam Coffee House</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div id="app" class="f-v">
+        <header class="bg-primary">
+            <h1 class="header"></h1>
+        </header>
+        <div class="f-h box">
+            <nav class="nav f-center text-primary bg-secondary">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="music.html">Music</a>
+                <a href="jobs.html">Jobs</a>
+            </nav>
+            <div class="f-v bg-light page-content p-l">
+                <h2 class="text-primary">Jobs at JavaJam</h2>
+                <p>
+                    Want to work at JavaJam? Fill up the job applciation form below to get started!
+                    Required fields are marked with *
+                </p>
+                <form class="job-application" action="show_post.php" method="post">
+                    <div>
+                        <label for="name">*Name: </label>
+                        <input name="name" type="text" 
+                            placeholder="Enter your name here"/>
+                    </div>
+                    <div>
+                        <label for="email">*Email: </label>
+                        <input name="email" type="email" 
+                        placeholder="Enter your Email-ID here"/>
+                    </div>
+                    <div>
+                        <label for="start-date">Start Date: </label>
+                        <input name="start-date" type="date" />
+
+                    </div>
+                    <div>
+                        <label for="work-exp">*Experience: </label>
+                        <textarea name="work-exp"
+                        placeholder="Enter your experience here"></textarea>
+                    </div>
+
+                    <input class="button" type="reset" value="Clear">
+                    <input class="button" type="submit" value="Apply Now">
+
+                </form>
+
+            </div>
+        </div>
+
+        <footer class="f-center f-v p-l bg-primary">
+            <i>Copyright &copy; 2014 JavaJam Coffee House</i>
+            <i><a href="mailto:ernest@ng.com">ernest@ng.com</a></i>
+        </footer>
+    </div>
+</body>
+
+</html>

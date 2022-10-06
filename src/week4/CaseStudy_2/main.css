@@ -1,0 +1,208 @@
+#app {
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*From https://userpages.umbc.edu/~geet2/ch10javajam/index.html */
+    background-image: url("images/javalogo.gif");
+    width: 100%;
+}
+
+.bullet {
+    /* From http://www.777icons.com/libs/food/24x24.htm */
+    list-style-image: url("images/bullet.gif")
+}
+
+.max-width{
+    width: 100%;
+}
+
+.max-height {
+    height: 100%;
+}
+
+.nav {
+    padding: 40px 0;
+    width: 10%;
+    min-width: 180px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.nav a:link {
+    color: #774a45;
+}
+
+.nav a:visited {
+    color: #c6ac90;
+}
+
+.p-s {
+    padding: 4px;
+}
+
+.p-m {
+    padding: 12px;
+}
+
+.p-l {
+    padding: 24px;
+}
+
+
+.m-none {
+    margin: 0;
+}
+.m-s {
+    margin: 4px;
+}
+
+.m-m {
+    margin: 12px;
+}
+
+.m-l {
+    margin: 24px;
+}
+
+.bg-primary {
+    background-color: #d1b38e;
+}
+
+.bg-secondary {
+    background-color: #e2d1b2;
+}
+
+.bg {
+    background-color: #e2d1b2;
+}
+
+.bg-light {
+    background-color: #f5f5dd;
+}
+
+.text-primary {
+    color: #2E0000;
+}
+
+.text-selected {
+    color: #c6ac90;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 300px;
+}
+
+#app header {
+    display: flex;
+    justify-content: center;
+}
+
+.f-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.f-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.f-space-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.f-v {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-h {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-content {
+    width: 90%;
+}
+
+
+.menu {
+    margin: auto;
+}
+
+.menu td {
+    padding: 12px;
+}
+
+.menu tr:nth-child(odd) {
+    background-color: #d1b38e;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.avatar {
+    padding: 10px 15px;
+    width: 64px;
+}
+
+.music-holder {
+    margin: auto;
+    max-width: 500px;
+    width: 90%;
+}
+
+
+@media only screen and (max-width: 720px) {
+    body {
+        margin: 0;
+    }
+    .box {
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav a {
+        padding: 12px;
+    
+    }
+    .page-content {
+        width: 100%;
+    }
+}
