@@ -31,9 +31,6 @@ function validateAll() {
     const startDateEle  = document.querySelector("#start-date-form input");
     const startDateValid = validDate(startDateEle.value);
     
-    console.log(nameEle, emailEle, startDateEle);
-    console.log(nameEle.value, emailEle.value, startDateEle.value);
-    console.log(nameValid, emailValid, startDateValid);
     return nameValid && emailValid && startDateValid;
 }
 
@@ -52,10 +49,10 @@ function validation(input, message, validator, name) {
 }
 
 function registerValidation() {
-    validation("#name-form input", "#name-form .error", validName, "name");
-    validation("#email-form input", "#email-form .error", validEmail, "email");
-    validation("#start-date-form input", "#start-date-form .error", validDate, "start date");
-    validation("#work-exp-form textarea", "#work-exp-form .error", validWorkExperience, "work experience");
+    validation("#name-form input", "#name-form .error", validName, "name Only Alphabets and spaces allowed");
+    validation("#email-form input", "#email-form .error", validEmail, "email. Must in be format of name@domain");
+    validation("#start-date-form input", "#start-date-form .error", validDate, "start date. Must be before today");
+    validation("#work-exp-form textarea", "#work-exp-form .error", validWorkExperience, "work experience. Must not be empty");
 }
 
 registerValidation();

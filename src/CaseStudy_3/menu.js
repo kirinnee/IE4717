@@ -20,7 +20,7 @@ function main(){
     
 
     function updatePrices() {
-        const t1 = updatePrice("#jj .cost", getElementAsInt("#jj .p-int"), getJustJava());
+        const t1 = updatePrice("#jj .cost", getElementAsInt("#jj .p-int"), 2);
         const t2 = updatePrice("#cal .cost", getElementAsInt("#cal .p-int"), getCafeAuLait());
         const t3 = updatePrice("#icap .cost", getElementAsInt("#icap .p-int"), getIceCappuccino());
 
@@ -42,22 +42,15 @@ function main(){
         return ele;
     }
     
-    function getJustJava(){
-        return parseInt($$("#jj").getAttribue("price") ?? "2");
-        
-    }
+    
     function getCafeAuLait(){
         const cal = $$("input[name=cafe-au-lait]:checked")?.value ?? "";
-        const ps = parseInt($$("#cal").getAttribue("price-s") ?? "2");
-        const pd = parseInt($$("#cal").getAttribue("price-d") ?? "3");
-        return cal == "" ? 0 : cal == "cafe-au-lait-single" ? ps : pd;
+        return cal == "" ? 0 : cal == "cafe-au-lait-single" ? 2 : 3;
     }
 
     function getIceCappuccino() {
         const icap = $$("input[name=ice-cap]:checked")?.value ?? "";
-        const ps = parseInt($$("#icap").getAttribue("price-s") ?? "4.75");
-        const pd = parseInt($$("#icap").getAttribue("price-d") ?? "5.75");
-        return icap == "" ? 0 : icap == "ice-cap-single" ? ps : pd;
+        return icap == "" ? 0 : icap == "ice-cap-single" ? 4.75 : 5.75;
     }
 
     function control(minus, plus, target) {
