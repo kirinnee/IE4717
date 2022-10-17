@@ -1,0 +1,160 @@
+.coffee-row input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+
+}
+
+.menu {
+    color: #2E0000;
+}
+
+.menu .check {
+    padding: 0 4px;
+    opacity: 0;
+}
+
+.menu .error-msg {
+    opacity: 0;
+}
+
+.menu input {
+    font-weight: bold;
+    padding: 4px 8px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.menu tr:nth-child(odd) input.display:disabled, .menu tr:nth-child(odd) tr input.display:disabled {
+    color: #2E0000;
+    background-color: #d1b38e;
+    border: 1px solid transparent;
+    text-align: center;
+
+}
+
+.menu tr:nth-child(even) input.display:disabled, .menu tr:nth-child(even) tr input.display:disabled {
+    color: #2E0000;
+    background-color: #f6f5dd;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+
+.menu div[contenteditable] {
+    margin: 8px 0;
+    border: 1px solid transparent;
+}
+
+.menu div[contenteditable=true] {
+    background-color: white;
+    border: 1px solid black;
+    
+}
+
+
+
+.coffee-row .name {
+    width: 150px;
+}
+
+.coffee-row .desc {
+    color: #2E0000;
+    font-weight: bold;
+    padding: 4px 8px;
+    width: 450px;
+}
+
+.coffee-row .desc.display {
+    color: #2E0000;
+    font-weight: bold;
+    padding: 4px 8px;
+    width: 450px;
+}
+
+.coffee-row .variant-name, .add-coffee-row .variant-name  {
+    width: 150px;
+}
+
+.coffee-row .price, .add-coffee-row .price {
+    width: 50px;
+}
+
+.coffee-row .edit {
+    opacity: 0;
+    border-color: transparent;
+}
+
+.menu td table {
+    border-collapse: collapse;
+}
+
+.menu td table td {
+    padding: 12px;
+    border: 1px solid black;
+}
+
+.menu tr table tr:nth-child(odd) {
+    background-color: transparent;
+}
+
+.menu .error-msg {
+    font-size: 14px;
+    padding: 4px 0;
+    color: #BB0000;
+}
+
+.menu .add-button {
+    text-align: center;
+    min-width: 40px;
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background: #00000066;
+    transition:  background-color 0.5s, color 0.5s;
+}
+
+.menu .add-button:hover, .menu .add-delete-variant:hover {
+    background: #000000AA;
+    color: white;
+}
+
+.menu .add-delete-variant {
+    text-align: center;
+    width: 40px;
+    margin: 8px 0;
+    padding: 8px 12px;
+    color: black;
+    cursor: pointer;
+    background: #00000000;
+    transition:  background-color 0.5s, color 0.5s;
+}
+
+.desc[contenteditable=true] {
+    margin: 8px 0;
+    border: 1px solid transparent;
+    color: #2E0000;
+    font-weight: bold;
+    padding: 4px 8px;
+    width: 450px;
+}
+
+
+.add-coffee-row td.add-button {
+    width: 98px;
+}
+
+
+
+.server-error-holder {
+    margin: 12px auto;
+}
+
+.server-error {
+    border-radius: 8px;
+    margin: 4px 0;
+    padding: 8px 12px;
+    border: 1px solid darkred;
+    color: darkred;
+    background-color:#f4d9d9;
+}

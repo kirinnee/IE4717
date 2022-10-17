@@ -24,3 +24,26 @@
     color:white;
     background-color: #000000;
 }
+
+.server-error-holder {
+    margin: 12px auto;
+}
+
+.server-error {
+    border-radius: 8px;
+    margin: 4px 0;
+    padding: 8px 12px;
+    border: 1px solid darkred;
+    color: darkred;
+    background-color:#f4d9d9;
+}
+
+.success-menu {
+    width: 200px;
+    border-radius: 8px;
+    margin: 4px auto;
+    padding: 8px 12px;
+    border: 1px solid darkgreen;
+    color: darkgreen;
+    background-color:lightgreen;
+}

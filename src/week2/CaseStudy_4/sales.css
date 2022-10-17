@@ -1,0 +1,35 @@
+.sales .choice, .sales .choice input {
+    font-size: 18px;
+    padding: 8px 12px;
+    margin: 2px 12px;
+}
+
+.sales input[type=submit]{
+    font-size: 18px;
+    padding: 8px 12px;
+    margin: 24px 12px;
+}
+.sales tr:nth-child(odd) {
+    background-color: #d1b38e;
+}
+
+.sales {
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+}
+
+.sales table {
+    margin: 50px 0;
+    font-size: 24px;
+
+}
+
+.sales th {
+    font-weight: 900;
+}
+
+.sales td, .sales th {
+    text-align: center;
+    padding: 8px 12px;
+}

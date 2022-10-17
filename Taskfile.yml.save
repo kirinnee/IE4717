@@ -21,7 +21,7 @@ tasks:
     desc: Startup Docker server
     cmds:
       - docker compose up -d
-      - browser-sync start -p "localhost:8001" --files "src/**/*.*"
+      - browser-sync start -p "localhost:8000" --files "src/**/*.*"
 
   stop:
     desc: Stop Server

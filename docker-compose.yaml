@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
       target: base
     ports:
-      - "8000:80"
+      - "8001:80"
     volumes:
       - ./src:/var/www/html/
   db:
@@ -20,7 +20,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      - 8001:80
+      - 8002:80
     environment:
       PMA_HOST: db
       MYSQL_USER: root

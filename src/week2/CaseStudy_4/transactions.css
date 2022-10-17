@@ -1,0 +1,17 @@
+.trans tr:nth-child(odd) {
+    background-color: #d1b38e;
+}
+
+.trans {
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+}
+
+.trans th {
+    font-weight: 900;
+}
+
+.trans td, .trans th {
+    padding: 8px 12px;
+}

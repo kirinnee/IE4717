@@ -2,29 +2,36 @@ function main(){
     
 
     const $$ = (s) => document.querySelector(s);
+    const $$$ = (s) => [...document.querySelectorAll(s)];
 
     function getElementAsInt(selector) {
         const ele = $$(selector);
-        const raw = ele.value ?? "0";
+        const raw = ele?.value ?? "0";
         const v = raw.trim() == "" ? "0" : raw.trim();
         return parseInt(v);
     }
+    function getElementAsFloat(selector) {
+        const ele = $$(selector);
+        const raw = ele?.value ?? "0";
+        const v = raw.trim() == "" ? "0" : raw.trim();
+        return parseFloat(v);
+    }
 
-    function updatePrice(select, amount, price) {
-        console.log(select, amount, price);
-        const s = $$(select);
+    function updatePrice(element) {
+        const i = element.id;
+        const amount = getElementAsInt(`#${i} .p-int`);
+
+        const price = getElementAsFloat(`input[name=${i}]:checked`);
+
         const total = (amount * price).toFixed(2);
-        s.innerHTML = `$ ${total}`;
+        $$(`#${i} .cost`).innerHTML = `$ ${total}`;
         return parseFloat(total);
     }
     
 
     function updatePrices() {
-        const t1 = updatePrice("#jj .cost", getElementAsInt("#jj .p-int"), 2);
-        const t2 = updatePrice("#cal .cost", getElementAsInt("#cal .p-int"), getCafeAuLait());
-        const t3 = updatePrice("#icap .cost", getElementAsInt("#icap .p-int"), getIceCappuccino());
-
-        const total = (t1 + t2 + t3).toFixed(2);
+        const sum = $$$(".coffee-row").map(ele => updatePrice(ele)).reduce((a,b)=> a + b,0);
+        const total = sum.toFixed(2);
         $$("#total-result").innerHTML = `Total: $ ${total}`;
 
     }
@@ -42,16 +49,7 @@ function main(){
         return ele;
     }
     
-    
-    function getCafeAuLait(){
-        const cal = $$("input[name=cafe-au-lait]:checked")?.value ?? "";
-        return cal == "" ? 0 : cal == "cafe-au-lait-single" ? 2 : 3;
-    }
 
-    function getIceCappuccino() {
-        const icap = $$("input[name=ice-cap]:checked")?.value ?? "";
-        return icap == "" ? 0 : icap == "ice-cap-single" ? 4.75 : 5.75;
-    }
 
     function control(minus, plus, target) {
         const m = $$(minus);
@@ -71,15 +69,16 @@ function main(){
         })
     }
     
-    [...document.querySelectorAll(".p-int")]
+    $$$(".p-int")
         .forEach(e => addUpdateListener(numberOnly(e)));
-    [...document.querySelectorAll("input[type=radio]")]
+    $$$("input[type=radio]")
         .forEach(e => addUpdateListener(e));
     
-    
-    control("#jj .minus", "#jj .plus", "#jj .p-int");
-    control("#cal .minus", "#cal .plus", "#cal .p-int");
-    control("#icap .minus", "#icap .plus", "#icap .p-int");
+    $$$(".coffee-row")
+        .forEach(cr => {
+            const i = cr.id;
+            control(`#${i} .minus`, `#${i} .plus`, `#${i} .p-int`);
+        });
 }
 
 main();

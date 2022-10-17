@@ -152,6 +152,9 @@ body {
     width: 90%;
 }
 
+.m-a {
+    margin: auto;
+}
 
 .menu {
     margin: auto;
